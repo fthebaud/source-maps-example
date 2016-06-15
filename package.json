@@ -1,0 +1,20 @@
+{
+  "name": "source-maps-example",
+  "version": "1.0.0",
+  "description": "demo for sourcemaps",
+  "keywords": [
+    "sourcemaps"
+  ],
+  "author": "fthebaud@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fthebaud/source-maps-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fthebaud/source-maps-example/issues"
+  },
+  "homepage": "https://github.com/fthebaud/source-maps-example#readme",
+  "scripts": {
+  }
+}
