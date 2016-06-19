@@ -1,3 +1,4 @@
+/* exported randomModule */
 var randomModule = (function() {
   'use strict';
 

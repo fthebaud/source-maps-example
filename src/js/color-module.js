@@ -1,3 +1,4 @@
+/* exported colorModule */
 var colorModule = (function() {
   'use strict';
 
@@ -16,7 +17,7 @@ var colorModule = (function() {
     };
   };
 
-  var getRandomColorRGB = function () {
+  var getRandomColorRGB = function() {
     var color = getRandomObjectColorRGB();
     return `rgb(${color.r}, ${color.g}, ${color.b})`;
   };
