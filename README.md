@@ -1,4 +1,3 @@
 # source-maps-example
 
-
-wip
+source map example with grunt + eslint extending the 'eslint-config-standard'

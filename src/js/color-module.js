@@ -19,7 +19,9 @@ var colorModule = (function() {
 
   var getRandomColorRGB = function() {
     var color = getRandomObjectColorRGB();
-    return `rgb(${color.r}, ${color.g}, ${color.b})`;
+    // TODO : uglify seems to have a problem with `
+    // return `rgb(${color.r}, ${color.g}, ${color.b})`;
+    return 'rgb(' + color.r + ', ' + color.g + ', ' + color.b + ')';
   };
 
   return {
