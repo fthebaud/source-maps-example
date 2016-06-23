@@ -16,11 +16,13 @@ module.exports = {
   extends: ['eslint:recommended', 'eslint-config-standard'],
 
   globals: {
+    module: true,
     randomModule: false
   },
 
   rules: {
     'semi': ['warn', 'always'],
-    'space-before-function-paren': ['warn', 'never']
+    'space-before-function-paren': ['warn', 'never'],
+    'padded-blocks': 'off'
   }
 };
