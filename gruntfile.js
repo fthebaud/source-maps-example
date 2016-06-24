@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     // clean target directory before a new build (idempotence)
-    clean: ['dest/'],
+    clean: ['dest/', '.tmp/'],
     // copy the html file that will be modified by usemin
     copy: {
       html: {
@@ -20,13 +20,18 @@ module.exports = function(grunt) {
     useminPrepare: {
       html: 'src/index.html', // html file to parse in order to find js/css to minify
       options: {
-        dest: 'dest', // base directory for transformed files
-        staging: 'dest/source' // rep for concatenated sources
+        dest: 'dest' // base directory for transformed files
       }
     },
     // usemin will update the path in the html file
     usemin: {
       html: ['dest/index.html'] // html file to update
+    },
+    // specific options for concat
+    concat: {
+      options: {
+        sourceMap: true // we want to keep the link with the original files, not the concatenated file
+      }
     },
     // specific options for uglify
     uglify: {
@@ -34,7 +39,8 @@ module.exports = function(grunt) {
         compress: true, // source compression
         mangle: true, // mangle the variables and function names (reduce them to single letters)
         sourceMap: true, // generates source maps in the same directory as the dest file, with the same basename but with a .map extension
-        sourceMapIncludeSources: false // we do not want the source to be in the map
+        sourceMapIncludeSources: true, // we want the source to be in the map
+        sourceMapIn: '.tmp/concat/js/script.min.js.map' // we use the sourceMap from the concat task as an input
       }
     }
   });
